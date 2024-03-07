@@ -205,6 +205,35 @@ article section {
   margin: 20px auto;
 }
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery .big {
+  flex: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.gallery img {
+  max-width: 100%;
+  margin: 5px;
+  box-shadow: 0 4x 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.gallery .row {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.gallery .row img {
+  max-width: 22.5%;
+}
+
 .table-container {
     width: 100%;
     overflow-x: auto;
@@ -347,6 +376,10 @@ footer td:first-child {
   .artikel p, .artikel h2 {
     margin-left: 5px;
     margin-right: 5px;
+  }
+
+  .gallery .row img {
+    max-width: 21.5%;
   }
 }
 
