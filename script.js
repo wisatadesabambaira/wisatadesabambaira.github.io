@@ -21,16 +21,25 @@ function closeMenu() {
 //   });
 // });
 
-function toggleDropdown(event) {
-  const dropdownContent = event.currentTarget.nextElementSibling;
-  if (dropdownContent.classList.contains("clicked")) {
-    dropdownContent.classList.remove("clicked");
-  } else {
-    dropdownContent.classList.add("clicked");
+document.addEventListener("DOMContentLoaded", function () {
+  // Cek jika perangkat adalah layar sentuh
+  if ("ontouchstart" in window || navigator.maxTouchPoints) {
+    // Menonaktifkan hover untuk dropdown pada perangkat layar sentuh
+    document.querySelectorAll(".dropdown-content").forEach(function (item) {
+      item.classList.add("clickable");
+    });
   }
-}
 
-// Tambahkan event listener untuk setiap dropdown
-document.querySelectorAll(".dropdown > a").forEach((item) => {
-  item.addEventListener("click", toggleDropdown);
+  // Event listener untuk klik pada dropdown
+  document.querySelectorAll(".dropdown > a").forEach((item) => {
+    item.addEventListener("click", function (event) {
+      event.preventDefault(); // Menghentikan link dari navigasi
+      let dropdownContent = event.target.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+        dropdownContent.style.display = "none";
+      } else {
+        dropdownContent.style.display = "block";
+      }
+    });
+  });
 });

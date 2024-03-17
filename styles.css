@@ -173,6 +173,10 @@ body,
   display: block;
 }
 
+.dropdown-content.clickable {
+  display: none;
+}
+
 .closebtn {
   position: absolute;
   top: 20px;
