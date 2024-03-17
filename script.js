@@ -82,3 +82,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  var link = document.getElementById("linkTidakAktif");
+  link.addEventListener("click", function (event) {
+    event.preventDefault(); // Mencegah aksi default, yaitu navigasi
+    // Anda juga bisa menambahkan kode lain di sini jika perlu
+  });
+});
