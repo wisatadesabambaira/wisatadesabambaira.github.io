@@ -118,7 +118,7 @@ body,
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(0, 0, 0, 0.9);
+  background-color:white;
   overflow-y: hidden;
   transition: 0.5s;
 }
@@ -135,7 +135,7 @@ body,
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
-  color: #818181;
+  color: black;
   display: block;
   transition: 0.3s;
 }
@@ -143,6 +143,34 @@ body,
 .overlay a:hover,
 .overlay a:focus {
   color: #f1f1f1;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown .dropdown-content.clicked {
+  display: block;
 }
 
 .closebtn {
@@ -299,20 +327,9 @@ footer {
   box-sizing: border-box;
 }
 
-footer table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-footer td {
-  padding: 8px;
-  border: none;
-  font-size: 12px;
-}
-
-footer td:first-child {
-  width: 20%;
-  font-weight: bold;
+.footer {
+  font-weight: 600;
+  text-align: center;
 }
 
 /* Sembunyikan hamburger menu pada layar yang lebih besar dari 768px */
@@ -385,5 +402,25 @@ footer td:first-child {
   .gallery {
     
   }
+
+  .overlay-content {
+    text-align: center;
+  }
+
+  .overlay-content .dropdown-content {
+    position: static; /* Menghilangkan positioning absolute */
+    margin: 0 auto; /* Pusatkan */
+    box-shadow: none; /* Opsi: hilangkan box shadow jika diinginkan */
+  }
+
+  .overlay-content .dropdown-content a {
+    padding: 10px;
+    text-align: center; /* Teks link terpusat */
+  }
+
+  /* Opsi untuk menambahkan gaya tambahan jika Anda ingin dropdown tetap muncul saat di-tap */
+  /* .overlay-content .dropdown:hover .dropdown-content, .overlay-content .dropdown:focus .dropdown-content {
+    display: block;
+  } */
 }
 
