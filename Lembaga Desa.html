@@ -10,51 +10,108 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            text-align: center;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        .error-code {
-            font-size: 5em;
-            font-weight: bold;
-        }
-
-        .error-message {
-            font-size: 1.5em;
-        }
-
-        .home-link {
-            color: #007bff;
-            text-decoration: none;
-            font-size: 1em;
-            margin-top: 20px;
-        }
-
-        .home-link:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 
 <body>
-    <div>
-        <p class="error-code">404</p>
-        <p class="error-message">Halaman tidak ditemukan</p>
-        <a href="/" class="home-link">Kembali ke Beranda</a>
-    </div>
+    <div class="main-container">
+        <header>
+            <a href="index.html" class="main-page-link">
+            <div class="header-content">
+                <div class="text-container">
+                    <h1>Wisata Desa Bambaira</h1>
+                    <p>Kabupaten Pasangkayu</p>
+                </div>
+                <div class="logo-container">
+                    <img src="img/https___kompaspedia.kompas.id_wp-content_uploads_2020_09_LOGO_7600_SULAWESI-BARAT.png"
+                        alt="Logo Pemerintahan 1">
+                    <img src="img/Kabupaten_Pasangkayu.png" alt="Logo Pemerintahan 2">
+                </div>
+            </div>
+        </a>
+        </header>
 
-    <!-- Tambahkan konten untuk setiap bagian sesuai kebutuhan -->
+        <div class="hamburger-menu">
+            <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+        </div>
+
+        <div class="navbar">
+            <a href="index.html">Beranda</a>
+            <a href="Profil Desa.html">Profil Desa</a>
+            <a href="Struktur Desa.html">Struktur Desa</a>
+            <div class="dropdown">
+                <a id="linkTidakAktif" href="">Wisata Desa &#x25BC;</a>
+                <div class="dropdown-content">
+                    <a href="Goa Ape.html" class="border-bottom">Goa Ape</a>
+                    <a href="Telaga Ape.html">Telaga Ape</a>
+                </div>
+            </div>
+            <a href="Produk Desa.html">Produk Desa</a>
+            <a href="Budaya Daerah.html">Budaya Daerah</a>
+            <a href="Lembaga Desa.html">Lembaga Desa</a>
+            <a href="Lokasi.html">Lokasi</a>
+        </div>
+
+        <div id="overlay-menu" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
+            <div class="overlay-content">
+                <a href="index.html">Beranda</a>
+                <a href="Profil Desa.html">Profil Desa</a>
+                <a href="Struktur Desa.html">Struktur Desa</a>
+                <div class="dropdown">
+                    <a href="javascript:void(0)" id="WisataDesaBtn">Wisata Desa &#x25BC;</a>
+                    <div id="WisataDesaDropdown" class="dropdown-content">
+                        <a href="Goa Ape.html" class="border-bottom">Goa Ape</a>
+                        <a href="Telaga Ape.html">Telaga Ape</a>
+                    </div>
+                </div>
+                <a href="Produk Desa.html">Produk Desa</a>
+                <a href="Budaya Daerah.html">Budaya Daerah</a>
+                <a href="Lembaga Desa.html">Lembaga Desa</a>
+                <a href="Lokasi.html">Lokasi</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <article class="artikel">
+                <h2>Lembaga Desa bambaira</h2>
+
+                <h3>Majelis Taklim</h3>
+                <p>
+                    Majelis taklim yakni sebagai lembaga pendidikan non-formal yang memiliki beberapa fungsi diantaranya yaitu fungsi keagamaan, yakni membina dan mengembangkan ajaran islam dalam rangka membentuk masyarakat yang beriman dan bertaqwa kepada Allah SWT. Majelis taklim di desa Bambaira sendiri aktif mulai pada tahun 2008 yang saat ini diketuai oleh Ibu Nurdiana R dan beranggotakan 32 orang yang aktif dalam lembaga tersebut. Selain itu lembaga ini juga terdiri dari 3 bidang di antaranya bidang dakwah, sosial kemasyarakatan, dan kesehatan yang bergerak untuk setiap dusun di desa Bambaira.
+                </p>
+
+                <h3>PKK Desa</h3>
+                <p>
+                    Lembaga kemasyarakatan sebagai mitra kerja pemerintah dan organisasi kemasyarakatan lainnya yang berfungsi sebagai fasilitator, perencana, pelaksana, pengendali dan penggerak pada masing-masing jenjang pemerintahan untuk terlaksananya program PKK. Lembaga desa PKK (Pemberdayaan Kesejahteraan Keluarga) desa Bambaira didirikan sejak terbentuknya desa Bambaira pada sekitaran tahun 1993 yang diketahui oleh setiap ibu desa. Saat ini diketuai oleh Ibu Darsiah dan beranggotakan 35 orang.
+                </p>
+
+                <h3>Badan Pemusyawaratan Desa</h3>
+                <p>
+                    Badan Pemusyawaratan Desa adalah lembaga perwujudan demokrasi dalam penyelenggaraan pemerintahan desa. BPD bisa disebut sebagai parlemen di desa, BPD adalah lembaga baru di desa pada masa otonomi daerah di Indonesia. Berdasarkan fungsinya, BPD bisa disebut sebagai lembaga kemasyarakatan. Dikarenakan bersesuaian dengan pada pemikiran pokok dalam kesadaran masyarakat.
+                </p>
+
+                <h3>Kelompok Tani</h3>
+                <p>
+                    Kelompok Tani adalah kumpilan petani/peternak/pekebun yang dibentuk atas dasar kesamaan kepentingan, kesamaan kondisi lingkungan (sosial, ekonomi, sumberdaya) dan keakraban untuk meningkatkan dan mengembangkan usaha anggota.
+                </p>
+
+                <h3>Pemerintah Desa</h3>
+                <p>
+                    Pemerintah Desa adalah penyelenggara urusan pemerintahan dan kepentingan masyarakat setempat dalam sistem pemerintahan Negara Kesatuan Republik Indonesia. Pemerintah desa adalah kepala desa atau yang disebut dengan nama lain dibantu perangkat desa sebagai unsur penyelenggara pemerintahan desa.
+                </p>
+
+                <h3>RISMA</h3>
+                <p>
+                    RISMA (Remaja Islam Masjid) adalah perkumpulan para remaja melakukan aktivitas dan ibadah di lingkungan masjid. RISMA Bambaira beranggotakan 35 orang yang diketuai oleh Andri dan sekretaris umum Hikma M. Risma sendiri memiliki 7 bidang yang bergerak aktif, adapun yaitu bidang ibadah dan dakwah, bidang humas, bidang seni dan bidang olahraga, bidang kebersihan, bidang keamanan dan bidang informasi dan dokumentasi. Lembaga ini aktif sejak 25 Februari 2024.
+                </p>
+
+                <h3>POSYANDU</h3>
+                <p>
+                    POSYANDU (Pos Pelayanan Keluarga Berencana - Kesehatan Terpadu) adalah kegiatan kesehatan dasar yang diselenggarakan dari, oleh dan untuk masyarakat yang dibantu oleh petugas kesehatan. Posyandu merupakan salah satu upaya kesehatan bersumberdaya masyarakat. Beranggotakan 35 orang yang diketuai oleh Ibu Kepala Desa yaitu Ibu Darsiah. Terbentuknya posyandu di desa Bambaira sendiri sekitar pada tahun 80 pada masa Bapak Amirudun masih menjabat.
+                </p>
+            </article>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

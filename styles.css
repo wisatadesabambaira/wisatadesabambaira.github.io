@@ -68,7 +68,6 @@ body,
   margin-right: 10px;
 }
 
-
 .hamburger {
   background: transparent;
   border: none;
@@ -218,7 +217,7 @@ body,
 
 .artikel p {
   text-align: justify;
-  line-height: 2.0;
+  line-height: 2;
 }
 
 .artikel section {
@@ -226,7 +225,7 @@ body,
 }
 
 ul {
-  line-height: 2.0;
+  line-height: 2;
 }
 
 article {
@@ -423,7 +422,8 @@ footer {
     max-width: 21.5%;
   }
 
-  .gallery {}
+  .gallery {
+  }
 
   .overlay-content {
     text-align: center;
